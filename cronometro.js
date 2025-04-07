@@ -110,7 +110,7 @@ document.querySelector('#cronometro-pedido').addEventListener('submit', async (e
     submitButton.textContent = "Salvando...";
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbxKZp9_e5e3EdZGynrFbVw3SH_v84_oQh0UYI5eTCFlt1j23kpITO6lPfEOtisbGvU/exec', {
+        const response = await fetch('Link da planilha do Google sheets', {
             method: 'POST',
             body: formData // Envia os dados diretamente
         });
