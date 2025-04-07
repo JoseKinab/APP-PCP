@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="white">
+    <title>Contrle de tempo linha de produção</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navBar">
+        <form action="" method="post" id="cronometro-pedido">
+            <input type="text" name="PedidoTotal" id="pdido-cont" placeholder="Pedido/Qtd" required>
+            <input type="text" name="Cronometro" id="cronometro" placeholder="00:00:00"  readonly required>
+           <div class="navFormbuttons">
+            <button type="button" id="iniciar">Iniciar</button>
+            <img src="img/ampulheta.gif" alt="" class="ampulheta">
+            <button type="submit" id="Salvar">Salvar</button>
+           </div>
+        </form>
+    </nav>
+
+    <form class="myForm" action="" method="post">
+
+        <div class="linha">
+            <label for="linha">Qual linha?</label>
+            <input type="number" name="Linha" value="linha" id="linha" required>
+            <p>
+                Controle de tempo 
+                     <br>
+                Linha de produção
+            </p>
+        </div>
+
+        <div class="data">
+            <label for="data">Data</label>
+            <input type="date" name="data" id="data" required>
+        </div>
+
+        <div class="pedido">
+            <input type="number" name="Pedido" id="pedido" placeholder="Pedido" required>
+            <input type="number" name="Caixas" id="caixas" placeholder="Qtd" required>
+        </div>
+
+        <div class="hora">
+            <label for="hora">Tempo-início</label>
+            <input type="time" name="Tempo-início" id="inicio" required>
+        </div>
+
+        <div class="hora">
+            <label for="hora">Tempo-final</label>
+            <input type="time" name="Tempo-final" id="final" required>
+        </div>
+
+        <div class="tempoTotal">
+            <textarea type="text" name="Tempo-ocioso" id="tempo-ocioso"required></textarea>
+        </div>
+
+        <div class="justificativa">
+            <select name="Justificativa" id="justificativa" required>
+                <option value="Parada linha">Parada linha</option>
+                <option value="Reposição">Reposição</option>
+                <option value="Falta de produto">Falta de produto</option>
+                <option value="Parada final de linha">Parada final de linha</option>
+                <option value="Manutenção">Manutenção</option>
+                <option value="Sem pedido">Sem pedido</option>
+            </select>
+        </div>
+
+        <button type="submit">Salvar dados</button>
+
+    </form>
+
+    <script src="txt.js"></script>
+    <script src="cronometro.js"></script>
+    
+</body>
+</html>
