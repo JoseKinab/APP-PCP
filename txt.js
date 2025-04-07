@@ -102,7 +102,7 @@ document.querySelector('.myForm').addEventListener('submit', async (event) => {
     submitButton.textContent = "Enviando dados...";
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbxFsEy4WKaWjfUrJ15bq9Jb7kNvTBQcq6ldbw-4OfEywIMrVoKipTgzvqdgnGMjL_XD/exec', {
+        const response = await fetch('link da planilha do Google sheets', {
             method: 'POST',
             body: formData
         });
