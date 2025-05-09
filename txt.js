@@ -1,6 +1,6 @@
 let infoTempo = document.querySelector(".tempoTotal");
 
-// Função para salvar os dados do formulário no Local Storage
+
 function saveFormData() {
     const form = document.querySelector('.myForm');
     const formData = {
@@ -15,7 +15,7 @@ function saveFormData() {
     localStorage.setItem('formData', JSON.stringify(formData));
 }
 
-// Função para carregar os dados do Local Storage
+
 function loadFormData() {
     const savedData = localStorage.getItem('formData');
     if (savedData) {
@@ -28,7 +28,7 @@ function loadFormData() {
         document.getElementById('final').value = formData.final || '';
         document.getElementById('justificativa').value = formData.justificativa || 'Parada linha';
         
-        // Se houver tempo final, recalcula o tempo ocioso
+        
         if (formData.final && formData.inicio) {
             const [horaInicio, minutoInicio] = formData.inicio.split(':').map(Number);
             const [horaFinal, minutoFinal] = formData.final.split(':').map(Number);
@@ -47,10 +47,10 @@ function loadFormData() {
     }
 }
 
-// Carrega os dados salvos quando a página é carregada
+
 document.addEventListener('DOMContentLoaded', loadFormData);
 
-// Adiciona listeners para salvar os dados quando houver mudanças
+
 document.getElementById('linha').addEventListener('input', saveFormData);
 document.getElementById('data').addEventListener('input', saveFormData);
 document.getElementById('pedido').addEventListener('input', saveFormData);
@@ -58,7 +58,7 @@ document.getElementById('caixas').addEventListener('input', saveFormData);
 document.getElementById('inicio').addEventListener('input', saveFormData);
 document.getElementById('justificativa').addEventListener('change', saveFormData);
 
-// Função para calcular o tempo ocioso (modificada para salvar dados)
+
 document.getElementById('final').addEventListener('input', function() {
     const inicio = document.getElementById('inicio').value;
     const final = this.value;
@@ -82,11 +82,11 @@ document.getElementById('final').addEventListener('input', function() {
         document.getElementById('tempo-ocioso').value = "";
     }
     
-    // Salva os dados após calcular o tempo
+
     saveFormData();
 });
 
-// Função para enviar os dados do formulário (modificada para limpar Local Storage)
+
 document.querySelector('.myForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -102,7 +102,7 @@ document.querySelector('.myForm').addEventListener('submit', async (event) => {
     submitButton.textContent = "Enviando dados...";
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbxFsEy4WKaWjfUrJ15bq9Jb7kNvTBQcq6ldbw-4OfEywIMrVoKipTgzvqdgnGMjL_XD/exec', {
+        const response = await fetch('https://script.google.com/...', {
             method: 'POST',
             body: formData
         });
@@ -111,7 +111,7 @@ document.querySelector('.myForm').addEventListener('submit', async (event) => {
             alert('Dados enviados com sucesso!');
             form.reset();
             document.querySelector('.tempoTotal').style.display = "none";
-            // Limpa o Local Storage após envio bem-sucedido
+      
             localStorage.removeItem('formData');
         } else {
             console.error('Erro ao enviar:', response.statusText);
