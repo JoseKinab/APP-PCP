@@ -3,7 +3,7 @@ let startTime;
 let running = false; 
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Captura os elementos dos inputs dos dois formulários
+ 
     const pedidoOrigem = document.getElementById("pdido-cont");
     const quantidadeOrigem = document.getElementById("quantidade");
     const pedidoDestino = document.getElementById("pedido");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const linhaDestino = document.getElementById("linha"); 
     const salvarButton = document.getElementById("Salvar");
 
-    // Recupera os valores do localStorage ao carregar a página
+
     pedidoOrigem.value = localStorage.getItem("pedido") || "";
     quantidadeOrigem.value = localStorage.getItem("quantidade") || "";
     pedidoDestino.value = localStorage.getItem("pedido") || "";
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     linhaOrigem.value = localStorage.getItem("linha") || ""; 
     linhaDestino.value = linhaOrigem.value;
 
-    // Adiciona eventos para copiar os valores e armazená-los
+
     pedidoOrigem.addEventListener("input", function () {
         pedidoDestino.value = pedidoOrigem.value;
         localStorage.setItem("pedido", pedidoOrigem.value);
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("linha", linhaOrigem.value);
     });
 
-    // Remove o valor do localStorage ao salvar o formulário
+  
     salvarButton.addEventListener("click", () => {
         localStorage.removeItem("linha");
     });
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const quantidadeInput = document.getElementById("quantidade");
     const quilosInput = document.getElementById("quilos");
 
-    // Recupera dados do localStorage ao carregar a página
+
     const storedPedido = localStorage.getItem("pedido");
     const storedStartTime = localStorage.getItem("startTime");
     const storedCesta = localStorage.getItem("tipoDeCesta");
