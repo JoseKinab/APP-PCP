@@ -1,0 +1,251 @@
+.page-inicial{
+    background: linear-gradient(to bottom, #33cccc73 10%, white 27%);
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-inicial img{
+    width: 70%;
+    max-width: 230px;
+}
+
+.page-inicial a{
+    position: relative;
+    width: 80%;
+    padding: 15px;
+    max-width: 250px;
+    text-align: center;
+    background-color: #33cccc70;
+    border-radius: 7px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    transition: .2s;
+    animation: slow 600ms ease-in-out;
+}
+
+.page-inicial a .btn-icon{
+    position: absolute;
+    right: 4px;
+    top: 13px;
+    width: 40px;
+}
+@keyframes slow {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  
+}
+.page-inicial a:hover{
+    transform: scale(1.1);
+}
+
+.navBar{
+    position: relative;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+}
+.navBar form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.navBar form .tipoDeCesta{
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+    gap: 10px;
+}
+.navBar form .tipoDeCesta input{
+    display: none;
+}
+.navBar form .tipoDeCesta input:checked + label{
+    background-color: #33cccc70;
+    transform: scale(1.1);
+}
+.navBar form .tipoDeCesta label{
+    padding: 10px;
+    background-color: rgba(219, 219, 219, 0.492);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.navBar form input{
+    background-color: transparent;
+    border: 1px solid rgb(161, 158, 158);
+    width: 35%;
+    max-width: 175px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    padding: 7px;
+}
+.statusPedido{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.statusPedido #cronometro{
+    cursor: not-allowed;
+}
+.navBar form .navFormbuttons{
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}
+.navBar form .navFormbuttons button{
+    background-color: transparent;
+    width: 125px;
+    padding: 5px;
+    border: 1px solid rgb(161, 158, 158);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.navBar form .navFormbuttons .ampulheta{
+    width: 53px;
+}
+
+.myForm{
+    position: relative;
+    top: 150px;
+    width: 100%;
+    min-height: 69vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.myForm p{
+    position: absolute;
+    top:-20px;
+    right: 0px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+.myForm .desaparecer{
+    display: none;
+}
+.myForm .pedido{
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3px;
+}
+.myForm .pedido input[type="number"]{
+    width: 70%;
+}
+.pedido input[type=number]:nth-child(2) {
+   width: 30%;
+}
+.myForm div{
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.myForm div label{
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+}
+.myForm div input{
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(161, 158, 158);
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 25px;
+    transition: .5s;
+}
+.myForm div input[type="number"]{
+    width: 85px;
+    text-align: center;
+}
+
+.myForm div input:valid{
+    background-color: #33cccc70;
+    border: none;
+}
+ .myForm .tempoTotal{
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    display: none;
+    resize: none;
+}
+.myForm .tempoTotal #tempo-ocioso {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+}
+
+.myForm .justificativa select{
+    background-color: #33cccc70;
+    border: none;
+    resize: none;
+    padding: 17px;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.myForm .justificativa select option{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.myForm button{
+    background-color: #33cccc70;
+    width: 90%;
+    max-width: 300px;
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+

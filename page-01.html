@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="white">
+    <title>Contrle de tempo linha de produção</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navBar">
+        <form action="" method="post" id="cronometro-pedido">
+            <div class="tipoDeCesta">
+                <input type="radio" name="Cesta" id="Cesta-básica" value="Cesta-básica" required>
+                <label for="Cesta-básica">Cesta básica</label>
+            
+                <input type="radio" name="Cesta" id="Kit-Hl" value="Kit-HL" required>
+                <label for="Kit-Hl">Kit HL</label>
+            
+                <input type="radio" name="Cesta" id="Kit’s-diversos" value="Kit’s-diversos" required>
+                <label for="Kit’s-diversos">Kit’s diversos</label>
+            </div>
+            <div class="statusPedido">
+                <input type="number" name="Linha" id="Linha" placeholder="Linha" required>
+                <input type="number" name="PedidoTotal" id="pdido-cont" placeholder="Pedido" required>
+                <input type="number" name="Quantidade" id="quantidade" placeholder="Qtde" required>
+                <input type="text" name="Quilos" id="quilos" placeholder="kg" required>
+                <input type="text" name="Cronometro" id="cronometro" placeholder="00:00:00"  readonly required>
+            </div>
+           <div class="navFormbuttons">
+            <button type="button" id="iniciar">Iniciar</button>
+            <img src="img/ampulheta.gif" alt="" class="ampulheta">
+            <button type="submit" id="Salvar">Salvar</button>
+           </div>
+        </form>
+    </nav>
+
+    <form class="myForm" action="" method="post">
+
+        <div class="linha">
+            <label class="desaparecer" for="linha">Linha</label>
+            <input class="desaparecer" type="number" name="Linha" value="linha" id="linha" readonly required>
+            <p>
+                Parada
+                     <br>
+                Linha de produção
+            </p>
+        </div>
+
+        <div class="pedido">
+            <input class="desaparecer" type="number" name="Pedido" id="pedido" placeholder="Pedido" readonly required>
+            <input class="desaparecer" type="number" name="Caixas" id="caixas" placeholder="Qtd" readonly required>
+        </div>
+
+         <div class="data">
+            <label for="data">Data</label>
+            <input type="date" name="data" id="data" required>
+        </div>
+
+        <div class="hora">
+            <label for="hora">Tempo-início</label>
+            <input type="time" name="Tempo-início" id="inicio" required>
+        </div>
+
+        <div class="hora">
+            <label for="hora">Tempo-final</label>
+            <input type="time" name="Tempo-final" id="final" required>
+        </div>
+
+        <div class="tempoTotal">
+            <textarea type="text" name="Tempo-ocioso" id="tempo-ocioso"required></textarea>
+        </div>
+
+        <div class="justificativa">
+            <select name="Justificativa" id="justificativa" required>
+                <option value="Parada linha">Parada linha</option>
+                <option value="Reposição">Reposição</option>
+                <option value="Falta de produto">Falta de produto</option>
+                <option value="Parada final de linha">Parada final de linha</option>
+                <option value="Manutenção">Manutenção</option>
+                <option value="Sem pedido">Sem pedido</option>
+            </select>
+        </div>
+
+        <button type="submit">Salvar dados</button>
+
+    </form>
+
+    <script src="txt.js"></script>
+    <script src="cronometro.js"></script>
+    
+</body>
+</html>
