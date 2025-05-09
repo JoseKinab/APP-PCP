@@ -1,6 +1,6 @@
 let timer;
 let startTime;
-let running = false; // Indica se o cronômetro está ativo
+let running = false; 
 
 document.addEventListener("DOMContentLoaded", function () {
     // Captura os elementos dos inputs dos dois formulários
@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const quantidadeOrigem = document.getElementById("quantidade");
     const pedidoDestino = document.getElementById("pedido");
     const quantidadeDestino = document.getElementById("caixas");
-    const linhaOrigem = document.getElementById("Linha"); // Novo input
-    const linhaDestino = document.getElementById("linha"); // Input de destino
+    const linhaOrigem = document.getElementById("Linha"); 
+    const linhaDestino = document.getElementById("linha"); 
     const salvarButton = document.getElementById("Salvar");
 
     // Recupera os valores do localStorage ao carregar a página
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     quantidadeOrigem.value = localStorage.getItem("quantidade") || "";
     pedidoDestino.value = localStorage.getItem("pedido") || "";
     quantidadeDestino.value = localStorage.getItem("quantidade") || "";
-    linhaOrigem.value = localStorage.getItem("linha") || ""; // Recupera Linha
+    linhaOrigem.value = localStorage.getItem("linha") || ""; 
     linhaDestino.value = linhaOrigem.value;
 
     // Adiciona eventos para copiar os valores e armazená-los
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("quantidade", quantidadeOrigem.value);
     });
 
-    linhaOrigem.addEventListener("input", function () { // Copia valor do input Linha
+    linhaOrigem.addEventListener("input", function () { 
         linhaDestino.value = linhaOrigem.value;
         localStorage.setItem("linha", linhaOrigem.value);
     });
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         startTimer(cronometroInput);
         iniciarButton.textContent = "Parar";
         running = true;
-        salvarButton.disabled = true; // Desabilita o botão Salvar se o cronômetro estiver ativo
+        salvarButton.disabled = true; 
     }
 
     if (storedQuantidade) {
@@ -178,7 +178,7 @@ document.querySelector('#cronometro-pedido').addEventListener('submit', async (e
     submitButton.textContent = "Salvando...";
 
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzUgIDTfuD7EwmL-kXp5LsPN5dhDgi8M1dCqbljgZRZJUweVjVxg1RNN2o-gOfa4zi2/exec', {
+        const response = await fetch('https://script.google.com/...', {
             method: 'POST',
             body: formData
         });
