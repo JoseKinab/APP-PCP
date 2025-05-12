@@ -92,7 +92,7 @@
 
 .navBar form input{
     background-color: transparent;
-    border: 1px solid rgb(161, 158, 158);
+    border: 1px solid rgba(161, 158, 158, 0.914);
     width: 35%;
     max-width: 175px;
     border-radius: 4px;
@@ -120,7 +120,7 @@
     background-color: transparent;
     width: 125px;
     padding: 5px;
-    border: 1px solid rgb(161, 158, 158);
+    border: 1px solid rgba(161, 158, 158, 0.914);
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
@@ -133,12 +133,13 @@
     position: relative;
     top: 150px;
     width: 100%;
-    min-height: 69vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     gap: 15px;
+    padding: 7px;
 }
 .myForm p{
     position: absolute;
@@ -183,7 +184,7 @@
     background-color: transparent;
     width: 100%;
     padding: 10px;
-    border: 1px solid rgb(161, 158, 158);
+    border: 1px solid rgba(161, 158, 158, 0.914);
     border-radius: 4px;
     font-weight: bold;
     font-size: 25px;
